@@ -38,7 +38,7 @@ class TkUI:
         Button(self.tk, text=options[0], command= lambda: self.button_option(1, input.get("1.0", "end-1c"), output, src.get("1.0", "end-1c"), sub.get("1.0", "end-1c"), sep.get("1.0", "end-1c"))).grid(column=0,row=1)
         Button(self.tk, text=options[1], command=lambda: self.button_option(2, input.get("1.0", "end-1c"), output, src.get("1.0", "end-1c"), sub.get("1.0", "end-1c"), sep.get("1.0", "end-1c"))).grid(column=0, row=2)
         Button(self.tk, text=options[2], command= lambda: self.button_option(3, input.get("1.0", "end-1c"), output, src.get("1.0", "end-1c"), sub.get("1.0", "end-1c"), sep.get("1.0", "end-1c"))).grid(column=0,row=3)
-        Button(self.tk, text=optins[3], command=lambda: self.button_option(4, input.get("1.0", "end-1c"), output, src.get("1.0", "end-1c"), sub.get("1.0", "end-1c"), sep.get("1.0", "end-1c"))).grid(column=0, row=4)
+        Button(self.tk, text=options[3], command=lambda: self.button_option(4, input.get("1.0", "end-1c"), output, src.get("1.0", "end-1c"), sub.get("1.0", "end-1c"), sep.get("1.0", "end-1c"))).grid(column=0, row=4)
         Button(self.tk, text=options[4], command=lambda: self.button_option(5, input.get("1.0", "end-1c"), output, src.get("1.0", "end-1c"), sub.get("1.0", "end-1c"), sep.get("1.0", "end-1c"))).grid(column=0, row=5)
 
     def button_option(self, option, text_input, output, src, sub, sep):
