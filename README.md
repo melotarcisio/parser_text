@@ -8,6 +8,7 @@ Software capaz de parsear textos e PDFs
 
 <h4>Extrair Números</h4>
 <p>Extrai todas as sequências numéricas da entrada separados pelo separador definido</p>
+<p>Você pode especificar a quantidade de dígitos se desejar, basta escrever o número, ou o intervalo na coluna "Busca"</p>
 
 <h4>Substituir Texto</h4>
 <p>Substitui o texto definido pelo entrada do campo "Buscar" pela entrada do campo "Substituir" em todo o texto de entrada</p>
