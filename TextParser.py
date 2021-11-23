@@ -16,7 +16,7 @@ class TextParser:
         if option == 1:
             self.output_text = text
         elif option == 2:
-            self.output_text = self.only_numbers(text, sep_e)
+            self.output_text = self.only_numbers(text, src,sep_e)
         elif option == 3:
             self.output_text = self.replace_text(text, src, sub)
         elif option == 4:
@@ -33,8 +33,14 @@ class TextParser:
         else:
             return text
 
-    def only_numbers(self, text, sep_e):
-        result_list = re.findall(r'(\d+)',text)
+    def only_numbers(self, text, src,sep_e):
+        search = re.search(r'(\d+)(\D+)?(\d+)?', src)
+        group_1 = search.group(1)
+        group_2 = '' if search.group(3) == None else search.group(3)
+        if search.group(2) is not None:
+            result_list = re.findall(r'(\d{' + group_1 + ',' + group_2 + '})',text)
+        else:
+            result_list = re.findall(r'(\d{' + search.group(1) + '})', text)
         result = self.src_all_str(result_list, sep_e)
         return result
 
